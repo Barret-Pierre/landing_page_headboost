@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+:root {
+  --violet: #d33bfd;
+}
+
+body {
+  font-family: "Montserrat";
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Header */
+header {
+  padding: 30px 0px;
+  background: linear-gradient(#333333, #20212e, #341b47);
+}
+
+header nav {
+  padding: 0px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .brand {
+  margin: 0px;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--violet);
+}
+
+header nav .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+header nav .right a {
+  text-decoration: none;
+  color: #cccccc;
+}
+
+header nav .right a:hover {
+  color: #ffffff;
+}
+
+header nav .right button {
+  padding: 5px 15px;
+  color: var(--violet);
+  border-radius: 5px;
+  border: var(--violet) 1px solid;
+  background-color: transparent;
+  transition: all 0.5s;
+}
+
+header nav .right button:hover {
+  color: #ffffff;
+  background-color: var(--violet);
+  cursor: pointer;
+}
+
+/* Présentation */
+
+.presentation {
+  padding: 30px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.presentation .product-presentation {
+  width: 100%;
+  flex-shrink: 2;
+}
+
+.presentation .product-presentation h2 {
+  margin: 0px;
+  font-size: 4vw;
+  font-weight: 400;
+}
+
+.presentation .product-presentation p {
+  font-weight: 300;
+  color: #cccccc;
+}
+
+.presentation .product-presentation button {
+  margin-top: 20px;
+  padding: 15px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: var(--violet) 1px solid;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.presentation .image-presentation {
+  max-width: 45%;
+}
+
+.presentation .image-presentation img {
+  width: 100%;
+}
+
+/* First Présentation */
+
+.first .product-presentation button {
+  background-color: var(--violet);
+  color: #ffffff;
+}
+
+.first .product-presentation button:hover {
+  background-color: transparent;
+  color: var(--violet);
+}
+
+.first .product-presentation .small-images {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.first .product-presentation .small-images .small {
+  margin: 15px 15px 15px 0px;
+  padding: 20px;
+  background-color: #33314d;
+  border-radius: 20px;
+  transition: filter 0.5s;
+}
+
+.first .product-presentation .small-images .small:hover {
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+.first .product-presentation .small-images .small img {
+  width: 10vw;
+  min-width: 80px;
+}
+
+/* Second Presentation */
+
+.second {
+  margin: 0px;
+  background-color: #333333;
+}
+
+.second .product-presentation .new {
+  color: var(--violet);
+}
+
+.second .product-presentation button {
+  background-color: transparent;
+  color: var(--violet);
+  transition: all 0.5s;
+}
+
+.second .product-presentation button:hover {
+  background-color: var(--violet);
+  color: #ffffff;
+}
+
+/* Footer */
+
+footer {
+  margin: 0px;
+  padding: 30px 5%;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+footer .column {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .column h3 {
+  margin: 0px 0px 15px 0px;
+  font-weight: 300;
+  color: var(--violet);
+}
+
+footer .column a {
+  color: #cccccc;
+  margin-bottom: 10px;
+}
+
+footer .column a:hover {
+  color: #ffffff;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 640px) {
+  /* Header */
+
+  header nav .right a {
+    display: none;
+  }
+
+  /* Présentation */
+
+  .presentation {
+    flex-direction: column-reverse;
+  }
+  .presentation .product-presentation h2 {
+    font-size: 1.5em;
+  }
+  .presentation .image-presentation {
+    max-width: 100%;
+  }
+
+  /* First Présentation */
+
+  .first .product-presentation .small-images .small img {
+    width: 80px;
+  }
+
+  /* Second Présentation */
+
+  .second .product-presentation {
+    margin-bottom: 30px;
+  }
+
+  /* Footer */
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .column {
+    text-align: left;
+  }
+  footer .column:nth-child(2) {
+    margin: 15px 0px;
+  }
+}
